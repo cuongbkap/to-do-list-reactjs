@@ -8,10 +8,7 @@ return (
 <div>
   <Header />
   <div className="row">
-    <div className="col-lg-6">
-      <Product />
-    </div>
-    <div className="col-lg-6">
+    <div className="col-12">
       <Product />
     </div>
   </div>

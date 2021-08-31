@@ -1,25 +1,38 @@
 function Product() {
+let products = [
+{id:1,name:"xiaomi mi 10 lite",price:"9.000.000d",status:true},
+{id:2,name:"xiaomi mi mix 4",price:"16.000.000d",status:true},
+{id:3,name:"xiaomi mi mix 3",price:"10.000.000d",status:false},
+{id:4,name:"xiaomi redmi note 10 pro",price:"7.000.000d",status:true},
+];
+let elements = products.map((product,index) => {
+return <tr key="index">
+    <td>{product.id}</td>
+    <td>{product.name}</td>
+    <td>{product.price}</td>
+    <td>{product.status === true ? 'Còn hàng' : 'Hết hàng'}</td>
+</tr>
+});
 return (
 
 
 <div>
-    <div className="row">
-        <div className="col-lg-12">
-            <div className="thumbnail">
-                <img src="https://i.pcmag.com/imagery/reviews/038Dr5TVEpwIv8rCljx6UcF-13..1588802180.jpg" alt="" />
-                <div className="caption">
-                    <h3>Title</h3>
-                    <p>
-                        ...
-                    </p>
-                    <p>
-                        <a href="!#" className="btn btn-primary">Action</a>
-                        <a href="!#" className="btn btn-default">Action</a>
-                    </p>
-                </div>
-            </div>
+    <div class="container">
 
-        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {elements}
+            </tbody>
+        </table>
+
     </div>
 </div>
 );
